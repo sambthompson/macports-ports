@@ -1,11 +1,11 @@
---- src/Makefile.in.orig	2010-09-07 00:11:37.000000000 +1000
-+++ src/Makefile.in	2011-07-18 01:59:36.000000000 +1000
-@@ -81,7 +81,7 @@
+--- src/Makefile.in.orig	2014-11-18 08:43:31.000000000 +1100
++++ src/Makefile.in	2024-10-09 10:18:46.000000000 +1100
+@@ -82,7 +82,7 @@
  bin_PROGRAMS = @SOPWITH_BINS@
  EXTRA_PROGRAMS = sopwith gtksopwith psopwith
  
--CFLAGS = @CFLAGS@ -I.. -I/usr/include/SDL
-+CFLAGS = -I.. @CFLAGS@ $(SDL_CFLAGS)
+-CFLAGS = @CFLAGS@ -I.. -I/usr/include/SDL ${SDL_CGLAFS}
++CFLAGS = @CFLAGS@ -I.. -I/usr/include/SDL ${SDL_CFLAGS}
  
  COMMON_SRC =  video.h	    swcollsn.c  swgames.h   swmain.h    swutil.h 	font.h      swcollsn.h  swground.c  swmisc.c    tcpcomm.c 	pcsound.h   swconf.c    swground.h  swmisc.h    swsound.c   tcpcomm.h 	std.h       swconf.h    swgrpha.c   swmove.c    swsound.h   timer.h 	sw.h        swdisp.c    swgrpha.h   swmove.h    swsymbol.c 		swasynio.c  swdisp.h    swinit.c    swsymbol.h 		swasynio.h  swend.c     swinit.h    swtitle.c 		swauto.c    swend.h     swobject.c  swtitle.h 		swauto.h    swgames.c   swmain.c    swobject.h  swutil.c		video.c
  
